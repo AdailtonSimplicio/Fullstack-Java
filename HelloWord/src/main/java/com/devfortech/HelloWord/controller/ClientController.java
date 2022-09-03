@@ -1,19 +1,34 @@
 package com.devfortech.HelloWord.controller;
 
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devfortech.HelloWord.dto.ClientsDTO;
+import com.devfortech.HelloWord.services.ClientsService;
 
 @RestController
 @RequestMapping(value = "/clients")
 public class ClientController {
 	
-	@GetMapping(value = "/findall")
-	public ClientsDTO findAll() {
-		ClientsDTO clients = new ClientsDTO(1L,"adailton,", "11555599688", "57265000", "JAIME DE OLIVEIRA", "1052", "SÃO MIGUEL", "TEOTÔNIO VILELA", "ALAGOAS");
+	@Autowired
+	private ClientsService service;
+	
+	@GetMapping
+	public ArrayList<ClientsDTO> findAll() {
+		ArrayList<ClientsDTO> clients = service.findAll();
 		return clients;
 	}
+	@GetMapping(value = "/{id}")
+	public ClientsDTO finById(@PathVariable Long id) {
+		ClientsDTO clients = service.finById(id);
+	
+	return clients;
+	}
+	
 
 }

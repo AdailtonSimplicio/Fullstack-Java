@@ -1,0 +1,27 @@
+package com.devfortech.HelloWord.services;
+
+import java.util.ArrayList;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.devfortech.HelloWord.dto.ClientsDTO;
+
+@Service
+public class ClientsService {
+	
+	public ResponseEntity<ArrayList<ClientsDTO>>findAll(){
+		
+		ArrayList<ClientsDTO> clients = new ArrayList<ClientsDTO>();
+		clients.add(new ClientsDTO(1L,"adailton,", "11555599688", "57265000", "JAIME DE OLIVEIRA", "1052", "SÃO MIGUEL", "TEOTÔNIO VILELA", "ALAGOAS"));
+		clients.add(new ClientsDTO(2L,"debora,", "11555599688", "57265000", "JAIME DE OLIVEIRA", "1052", "SÃO MIGUEL", "TEOTÔNIO VILELA", "ALAGOAS"));
+		return ResponseEntity.ok().body(clients);
+		
+	}
+		
+
+	public ClientsDTO finById(Long id) {
+		ClientsDTO clients = new ClientsDTO(id,"adailton,", "11555599688", "57265000", "JAIME DE OLIVEIRA", "1052", "SÃO MIGUEL", "TEOTÔNIO VILELA", "ALAGOAS");
+		return clients;
+	}
+}

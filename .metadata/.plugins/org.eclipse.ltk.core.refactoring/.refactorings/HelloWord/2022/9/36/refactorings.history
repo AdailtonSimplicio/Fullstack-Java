@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.devfortech.HelloWord.services.ClientService&apos; to &apos;ClientsService&apos;&#x0D;&#x0A;- Original project: &apos;HelloWord&apos;&#x0D;&#x0A;- Original element: &apos;com.devfortech.HelloWord.services.ClientService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.devfortech.HelloWord.services.ClientsService&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ClientService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.devfortech.HelloWord.services{ClientService.java[ClientService" matchStrategy="1" name="ClientsService" qualified="false" references="true" similarDeclarations="false" stamp="1662169213897" textual="false" version="1.0"/>
+</session>
