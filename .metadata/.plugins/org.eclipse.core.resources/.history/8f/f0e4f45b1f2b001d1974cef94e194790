@@ -1,0 +1,5 @@
+package com.devfortech.HelloWord.dto;
+
+public class ClientsDTO {
+
+}

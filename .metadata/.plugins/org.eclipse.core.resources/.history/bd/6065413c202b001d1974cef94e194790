@@ -1,0 +1,20 @@
+package com.devfortech.HelloWord.dto;
+
+import java.io.Serializable;
+
+public class ClientsDTO implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	private Lond id;
+	private String name;
+	private String cpf;
+	private String cep;
+	private String rua;
+	private String numero;
+	private String Bairro;
+	private String cidade;
+	private String estado;
+	
+	
+
+}
